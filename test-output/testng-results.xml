@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="24525" started-at="2019-09-24T16:18:09Z" finished-at="2019-09-24T16:18:34Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="24525" started-at="2019-09-24T16:18:09Z" finished-at="2019-09-24T16:18:34Z">
+      <class name="com.tests.tests">
+        <test-method status="PASS" signature="Initilize()[pri:0, instance:com.tests.tests@5442a311]" name="Initilize" is-config="true" duration-ms="12975" started-at="2019-09-24T18:18:09Z" finished-at="2019-09-24T18:18:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initilize -->
+        <test-method status="PASS" signature="TestDragAndDrop()[pri:0, instance:com.tests.tests@5442a311]" name="TestDragAndDrop" duration-ms="10577" started-at="2019-09-24T18:18:22Z" finished-at="2019-09-24T18:18:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestDragAndDrop -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.tests@5442a311]" name="tearDown" is-config="true" duration-ms="948" started-at="2019-09-24T18:18:33Z" finished-at="2019-09-24T18:18:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tests.tests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
