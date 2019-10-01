@@ -5,7 +5,7 @@
     <classes>
       <class name="com.tests.tests">
         <methods>
-          <include name="TestDragAndDrop"/>
+          <include name="TestUsingUiautomatorTest"/>
           <include name="tearDown"/>
           <include name="Initilize"/>
         </methods>

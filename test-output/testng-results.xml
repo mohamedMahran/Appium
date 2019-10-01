@@ -1,21 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24525" started-at="2019-09-24T16:18:09Z" finished-at="2019-09-24T16:18:34Z">
+  <suite name="Default suite" duration-ms="130637" started-at="2019-10-01T13:41:24Z" finished-at="2019-10-01T13:43:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24525" started-at="2019-09-24T16:18:09Z" finished-at="2019-09-24T16:18:34Z">
+    <test name="Default test" duration-ms="130637" started-at="2019-10-01T13:41:24Z" finished-at="2019-10-01T13:43:35Z">
       <class name="com.tests.tests">
-        <test-method status="PASS" signature="Initilize()[pri:0, instance:com.tests.tests@5442a311]" name="Initilize" is-config="true" duration-ms="12975" started-at="2019-09-24T18:18:09Z" finished-at="2019-09-24T18:18:22Z">
+        <test-method status="PASS" signature="Initilize()[pri:0, instance:com.tests.tests@239963d8]" name="Initilize" is-config="true" duration-ms="12043" started-at="2019-10-01T15:41:24Z" finished-at="2019-10-01T15:41:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Initilize -->
-        <test-method status="PASS" signature="TestDragAndDrop()[pri:0, instance:com.tests.tests@5442a311]" name="TestDragAndDrop" duration-ms="10577" started-at="2019-09-24T18:18:22Z" finished-at="2019-09-24T18:18:33Z">
+        <test-method status="PASS" signature="TestBasics()[pri:0, instance:com.tests.tests@239963d8]" name="TestBasics" duration-ms="7515" started-at="2019-10-01T15:41:36Z" finished-at="2019-10-01T15:41:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestBasics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.tests@239963d8]" name="tearDown" is-config="true" duration-ms="1368" started-at="2019-10-01T15:41:44Z" finished-at="2019-10-01T15:41:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="Initilize()[pri:0, instance:com.tests.tests@239963d8]" name="Initilize" is-config="true" duration-ms="11442" started-at="2019-10-01T15:41:45Z" finished-at="2019-10-01T15:41:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initilize -->
+        <test-method status="PASS" signature="TestDragAndDrop()[pri:0, instance:com.tests.tests@239963d8]" name="TestDragAndDrop" duration-ms="14037" started-at="2019-10-01T15:41:56Z" finished-at="2019-10-01T15:42:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestDragAndDrop -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.tests@5442a311]" name="tearDown" is-config="true" duration-ms="948" started-at="2019-09-24T18:18:33Z" finished-at="2019-09-24T18:18:34Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.tests@239963d8]" name="tearDown" is-config="true" duration-ms="579" started-at="2019-10-01T15:42:10Z" finished-at="2019-10-01T15:42:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="Initilize()[pri:0, instance:com.tests.tests@239963d8]" name="Initilize" is-config="true" duration-ms="12215" started-at="2019-10-01T15:42:11Z" finished-at="2019-10-01T15:42:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initilize -->
+        <test-method status="PASS" signature="TestGestures()[pri:0, instance:com.tests.tests@239963d8]" name="TestGestures" duration-ms="9156" started-at="2019-10-01T15:42:23Z" finished-at="2019-10-01T15:42:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestGestures -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.tests@239963d8]" name="tearDown" is-config="true" duration-ms="720" started-at="2019-10-01T15:42:32Z" finished-at="2019-10-01T15:42:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="Initilize()[pri:0, instance:com.tests.tests@239963d8]" name="Initilize" is-config="true" duration-ms="11243" started-at="2019-10-01T15:42:33Z" finished-at="2019-10-01T15:42:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initilize -->
+        <test-method status="PASS" signature="TestScrollingDemo()[pri:0, instance:com.tests.tests@239963d8]" name="TestScrollingDemo" duration-ms="7570" started-at="2019-10-01T15:42:44Z" finished-at="2019-10-01T15:42:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestScrollingDemo -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.tests@239963d8]" name="tearDown" is-config="true" duration-ms="695" started-at="2019-10-01T15:42:52Z" finished-at="2019-10-01T15:42:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="Initilize()[pri:0, instance:com.tests.tests@239963d8]" name="Initilize" is-config="true" duration-ms="11396" started-at="2019-10-01T15:42:53Z" finished-at="2019-10-01T15:43:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initilize -->
+        <test-method status="PASS" signature="TestSwipDemo()[pri:0, instance:com.tests.tests@239963d8]" name="TestSwipDemo" duration-ms="14385" started-at="2019-10-01T15:43:04Z" finished-at="2019-10-01T15:43:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestSwipDemo -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.tests@239963d8]" name="tearDown" is-config="true" duration-ms="661" started-at="2019-10-01T15:43:18Z" finished-at="2019-10-01T15:43:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="Initilize()[pri:0, instance:com.tests.tests@239963d8]" name="Initilize" is-config="true" duration-ms="12160" started-at="2019-10-01T15:43:19Z" finished-at="2019-10-01T15:43:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initilize -->
+        <test-method status="PASS" signature="TestUsingUiautomatorTest()[pri:0, instance:com.tests.tests@239963d8]" name="TestUsingUiautomatorTest" duration-ms="2803" started-at="2019-10-01T15:43:31Z" finished-at="2019-10-01T15:43:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestUsingUiautomatorTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.tests@239963d8]" name="tearDown" is-config="true" duration-ms="618" started-at="2019-10-01T15:43:34Z" finished-at="2019-10-01T15:43:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -5,13 +5,10 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
-
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 import com.utility.ReadPropertyFile;
-
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -38,15 +35,19 @@ public class base {
 		String device= rpf.ReadProperty();
 		 if(device.equals("emulator"))
 				 {
-		 capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Rahulemulator");
+			 capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Emulator-5554");
+			 capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+			 capabilities.setCapability("newCommandTimeout", 1200);
+			 driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);		 
 				 }
 		 else if (device.equals("real"))
 		 {
-		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device");
+			 capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "LC566YH06083");
+			 capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+			 capabilities.setCapability("newCommandTimeout", 1200);
+			 driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		 }
-		 capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-		 capabilities.setCapability("newCommandTimeout", 300);
-		 driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		 
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
