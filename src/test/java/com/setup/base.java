@@ -1,6 +1,7 @@
 package com.setup;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,45 +16,62 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class base {
 	
-	/*6. What are the Desired capabilities? How to talk to appium && Invoking Android Driver- Creating a base program*/
-	
 	 Properties prop = new Properties();
 	 InputStream input ;
 	 public static AndroidDriver<AndroidElement>  driver;
 	
-	@BeforeMethod
-	public  void Initilize() throws MalformedURLException
+	
+	public  AndroidDriver<AndroidElement> capabilities(String device)  throws MalformedURLException
 	{
-		// TODO Auto-generated method stub
 	 try {
 		 
 		 File appDir = new File("src");
-		 File app = new File(appDir, "ApiDemos-debug.apk");
+		 //File app = new File(appDir, "ApiDemos-debug.apk");
+		 File app = new File(appDir, "General-Store.apk");
 		 DesiredCapabilities capabilities = new DesiredCapabilities();
-		 
-		ReadPropertyFile rpf = new ReadPropertyFile();
-		String device= rpf.ReadProperty();
+		  
 		 if(device.equals("emulator"))
 				 {
-			 capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Emulator-5554");
-			 capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-			 capabilities.setCapability("newCommandTimeout", 1200);
-			 driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);		 
+			 capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android SDK built for x86");
+			 capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 14);
+			 capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+			 capabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+			 //capabilities.setCapability("appPackage", "com.google.android.apps.nexuslauncher");
+			 //capabilities.setCapability("appActivity", ".NexusLauncherActivity");
+			 capabilities.setCapability("autoGrantPermissions", true);
 				 }
 		 else if (device.equals("real"))
 		 {
 			 capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "LC566YH06083");
-			 capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-			 capabilities.setCapability("newCommandTimeout", 1200);
-			 driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		 }
+		 capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+		 //capabilities.setCapability("newCommandTimeout", 1200);
+		 driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);	
+		
 		 
-	} catch (Exception e) {
+	 	} 
+	 catch (Exception e) 
+	 	{
 		// TODO Auto-generated catch block
 		e.printStackTrace();
+	 	}
+	return driver;
 	}
-	//return driver;
+	public String ReadProperty() throws IOException
+	{
+		 ReadPropertyFile rpf = new ReadPropertyFile();
+		 String device= rpf.ReadProperty();
+		 return device;
 	}
+	
+	@BeforeMethod
+	public void setUp() throws IOException
+	{
+		String device = ReadProperty();
+		capabilities(device);
+	}
+	
+	
 	@AfterMethod
 	public void tearDown() {
 		try {

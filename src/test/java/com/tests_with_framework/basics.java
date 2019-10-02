@@ -1,5 +1,4 @@
-	package com.tests;
-	
+	package com.tests_with_framework;
 	import org.testng.annotations.Test;
 	import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 	import static io.appium.java_client.touch.TapOptions.tapOptions;
@@ -11,28 +10,27 @@
     import org.openqa.selenium.StaleElementReferenceException;
 	import org.openqa.selenium.WebElement;
 	import com.pages.ApiDemoPage;
-	import com.setup.base;
-	import com.utility.Helpers;
+	import com.setup.baseApiDemo;
+import com.utility.Helpers;
 	import io.appium.java_client.TouchAction;
 	
-	public class tests extends base {
-	
+	public class basics extends baseApiDemo {
 		@Test
 		public void TestBasics() throws MalformedURLException {
 			try {
 				
 				ApiDemoPage ApiDemo = new ApiDemoPage();
-				Helpers.ImplicitWait();
+				Helpers.implicitWait();
 				ApiDemo.ClickOnPrefrencesButton();
 				Thread.sleep(500);
 				ApiDemo.ClickOnPrefrenceDependenciesButton();
-				Helpers.ImplicitWait();
+				Helpers.implicitWait();
 				ApiDemo.SelectWifiCheckBox();
-				Helpers.ImplicitWait();
+				Helpers.implicitWait();
 				ApiDemo.ClickOnWifiSettings();
-				Helpers.ImplicitWait();
+				Helpers.implicitWait();
 				ApiDemo.TypeTextInTheWifiTextBox("Hello");
-				Helpers.ImplicitWait();
+				Helpers.implicitWait();
 				ApiDemo.ClickOnOkButtonInWifiSettings(1);
 				
 			} catch (Exception e) {
@@ -67,21 +65,22 @@
 				ApiDemoPage ApiDemo = new ApiDemoPage();
 				ApiDemo.ClickOnViewButton();
 				// Invoked Tap action
+				@SuppressWarnings("rawtypes")
 				TouchAction t = new TouchAction(driver);
-				Helpers.ImplicitWait();
+				Helpers.implicitWait();
 				WebElement expandList = ApiDemo.ExpandableList;
-				Helpers.ImplicitWait();
+				Helpers.implicitWait();
 				t.tap(tapOptions().withElement(element(expandList))).perform();
 				// Invoked long press
 				// t.tap(tapOptions().withElement(element(expandList)).withPosition(positionOption)
-				Helpers.ImplicitWait();
+				Helpers.implicitWait();
 				ApiDemo.ClickOnCustomAdapter();
 				Thread.sleep(500);
 				WebElement pn = driver.findElementByXPath("//android.widget.TextView[@text='People Names']");
-				Helpers.ImplicitWait();
+				Helpers.implicitWait();
 				t.longPress(longPressOptions().withElement(element(pn)).withDuration(Duration.ofSeconds(2))).release()
 						.perform();
-				Helpers.ImplicitWait();
+				Helpers.implicitWait();
 				assertTrue(driver.findElementById("android:id/title").isDisplayed());
 			
 			} catch (Exception e) {
@@ -102,6 +101,7 @@
 				ApiDemo.ClickOnDataWidget();
 				ApiDemo.ClickOnInlineButton();
 				driver.findElementByXPath("//*[@content-desc='9']").click();	
+				@SuppressWarnings("rawtypes")
 				TouchAction t = new TouchAction(driver);
 				WebElement first = driver.findElementByXPath("//*[@content-desc='15']");
 				WebElement second = driver.findElementByXPath("//*[@content-desc='45']");
@@ -119,7 +119,7 @@
 		public void TestScrollingDemo() {
 			ApiDemoPage ApiDemo = new ApiDemoPage();
 			ApiDemo.ClickOnViewButton();			
-			Helpers.ImplicitWait();
+			Helpers.implicitWait();
 			ApiDemo.scrollToBars();
 		}
 	
@@ -127,6 +127,7 @@
 		public void TestDragAndDrop() throws InterruptedException {
 			try
 			{
+				@SuppressWarnings("rawtypes")
 				TouchAction t = new TouchAction(driver);
 				ApiDemoPage ApiDemo = new ApiDemoPage();
 				ApiDemo.ClickOnViewButton();				

@@ -1,10 +1,11 @@
 package com.pages;
 
 import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import com.setup.base;
+import com.setup.baseApiDemo;
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -58,8 +59,8 @@ public class ApiDemoPage{
 	
 	public ApiDemoPage()
 	{
-		if (base.driver != null) {
-			PageFactory.initElements(new AppiumFieldDecorator(base.driver),this);
+		if (baseApiDemo.driver != null) {
+			PageFactory.initElements(new AppiumFieldDecorator(baseApiDemo.driver),this);
 		} else {
 			try {
 				throw new Exception("Driver doesn't instintiated");
