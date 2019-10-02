@@ -10,7 +10,7 @@
     import org.openqa.selenium.StaleElementReferenceException;
 	import org.openqa.selenium.WebElement;
 	import com.pages.ApiDemoPage;
-	import com.setup.baseApiDemo;
+import com.setup.baseApiDemo;
 import com.utility.Helpers;
 	import io.appium.java_client.TouchAction;
 	

@@ -5,7 +5,6 @@ import java.net.MalformedURLException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.setup.base;
-import com.utility.Helpers;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 
@@ -48,7 +47,7 @@ public class eCommerce_tc_3 extends base{
 	     for(int i =0 ; i <count; i++ )
 	     {
 	    	 String amount1=driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(i).getText();
-	    	 double amount= Helpers.getAmount(amount1);
+	    	 double amount= getAmount(amount1);
 	    	 sum+=amount;
 	     }
 	   System.out.println(sum + "sum of the products" );
@@ -63,6 +62,14 @@ public class eCommerce_tc_3 extends base{
 	   
 	   Assert.assertEquals(sum, totalValue);
 	   
+	}
+	
+	public static double getAmount(String value )
+	{
+			value=value.substring(1);
+		    double amountValue=Double.parseDouble(value);
+		   
+		    return amountValue;
 	}
 
 }
